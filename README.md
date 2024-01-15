@@ -1,11 +1,45 @@
 # airflow_tutorial
 --- 
 
-A tutorial for get start on Apache Airflow by [Serpsaipong Navanuraksa](https://github.com/funamorisenji)
+A tutorial for get start on Apache Airflow by [Serps
+aipong Navanuraksa](https://github.com/funamorisenji)
 
-In this repository, I will show you how to get start on Apache Airflow. I will use Docker to run Airflow and PostgreSQL. I will also show you how to create a simple DAG and run it.
+In this repository, I will show you how to get start on [Apache Airflow](https://airflow.apache.org/). I will use [Docker](https://www.docker.com/) to run [Airflow](https://airflow.apache.org/) and PostgreSQL. I will also show you how to create a simple DAG and run it.
+
+[Apache Airflow](https://airflow.apache.org/) is an open-source platform for authoring, scheduling and monitoring data and computing workflows. First developed by [Airbnb](https://www.airbnb.com/), it is now under the [Apache Software Foundation](https://apache.org/). [Airflow](https://airflow.apache.org/) uses [Python](https://www.python.org/) to create workflows that can be easily scheduled and monitored. [Airflow](https://airflow.apache.org/) can run anything—it is completely agnostic to what you are running.
+
+Benefits of [Apache Airflow](https://airflow.apache.org/) include:
+
+- Ease of use—you only need a little python knowledge to get started.
+- Open-source community—Airflow is free and has a large community of active users.
+- Integrations—ready-to-use operators allow you to integrate Airflow with cloud platforms (Google, AWS, Azure, etc).
+- Coding with standard Python—you can create flexible workflows using Python with no knowledge of additional technologies or frameworks.
+- Graphical UI—monitor and manage workflows, check the status of ongoing and completed tasks.
+
 
 First, you should understand the architecture of [Apache Airflow](https://airflow.apache.org/).
+
+## Airflow Architecuture
+--- 
+
+![airflow_architecture.png](document%2Fimages%2Fairflow_architecture.png)
+
+[Apache Airflow](https://airflow.apache.org/) consists of 3 main components.
+- Web Server
+- Scheduler
+- Worker
+
+The Airflow platform lets you build and run workflows, which are represented as Directed Acyclic Graphs (DAGs). A sample DAG is shown in the diagram below.
+
+![DAGs-example.png](document%2Fimages%2FDAGs-example.png)
+
+A DAG contains Tasks (action items) and specifies the dependencies between them and the order in which they are executed. A Scheduler handles scheduled workflows and submits Tasks to the Executor, which runs them. The Executor pushes tasks to workers.
+
+Other typical components of an Airflow architecture include a database to store state metadata, a web server used to inspect and debug Tasks and DAGs, and a folder containing the DAG files.
+
+![airflow-architecture-2.png](document%2Fimages%2Fairflow-architecture-2.png)
+
+To get start with [Apache Airflow](https://airflow.apache.org/), I will use [Docker](https://www.docker.com/) to run it.
 
 ## Docker Compose 
 --- 
@@ -66,3 +100,5 @@ This is the known issue that I found when I try to run Airflow with Docker Compo
 - [Airflow Docker](https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html)
 - [Airflow Docker Compose](https://airflow.apache.org/docs/apache-airflow/stable/start/docker-compose.html)
 - [Airflow GitHub](https://github.com/apache/airflow)
+- [Airflow Use Case, Architecture, and best practice](https://www.run.ai/guides/machine-learning-operations/apache-airflow#Airflow-Architecture)
+- 
