@@ -43,7 +43,7 @@ To get start with [Apache Airflow](https://airflow.apache.org/), I will use [Doc
 
 ## Docker Compose 
 --- 
-I will use Docker Compose to run Airflow and PostgreSQL. You can see the `docker-compose.yaml` file in this [link](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html).
+I will use Docker Compose to run Airflow and PostgreSQL. You can see the `docker-compose.yaml` file in this [link](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html) or go to folder `script/docker-compose.yaml` which is curretly newest for now (2024-01-15).
 
 After you using `curl` to download the `docker-compose.yaml` file, you can run the following command to start Airflow and PostgreSQL.
 
